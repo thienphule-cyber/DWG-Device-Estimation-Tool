@@ -1,0 +1,15 @@
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Temporary files
+temp/
+
+# Python cache (nên thêm để repo sạch sẽ)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# macOS system files
+.DS_Store

@@ -1,0 +1,17 @@
+{
+  "_note": "Fallback mapping from CAD layer names to device types, used when a block name is not recognized. Also lists layer hints for room detection.",
+  "match_mode": "contains",
+  "device_layers": {
+    "lighting": ["LIGHT", "LIGHTING", "E-LITE", "DEN"],
+    "switches": ["SWITCH", "E-SWIT", "CONG_TAC"],
+    "sockets": ["POWER", "SOCKET", "E-POWR", "O_CAM"],
+    "sensors": ["SENSOR", "DETECT", "E-FIRE", "BMS"],
+    "hvac": ["HVAC", "M-HVAC", "AIRCON", "DIEU_HOA"]
+  },
+  "room_layers": {
+    "boundary_layers": ["ROOM", "SPACE", "A-AREA", "A-ROOM", "PHONG", "ZONE"],
+    "wall_layers": ["WALL", "A-WALL", "TUONG"],
+    "label_layers": ["TEXT", "ROOM-NAME", "A-ANNO-TEXT", "TEN_PHONG"]
+  },
+  "ignore_layers": ["DEFPOINTS", "DIM", "DIMENSION", "GRID", "HATCH", "TITLE"]
+}

@@ -1,0 +1,12 @@
+{
+  "_note": "Maps CAD block names to device types. Matching is case-insensitive and uses 'contains'. Add your own project-specific block names here.",
+  "match_mode": "contains",
+  "device_types": {
+    "lighting": ["LIGHT", "LAMP", "DOWNLIGHT", "LUMINAIRE", "LED", "DEN", "BONG"],
+    "switches": ["SWITCH", "SW_", "DIMMER", "CONG_TAC", "CONGTAC", "CT_"],
+    "sockets": ["SOCKET", "OUTLET", "RECEPTACLE", "O_CAM", "OCAM", "PLUG"],
+    "sensors": ["SENSOR", "PIR", "MOTION", "OCCUPANCY", "SMOKE", "DETECTOR", "CAM_BIEN"],
+    "hvac": ["HVAC", "AC_", "AIRCON", "FCU", "AHU", "DIFFUSER", "DIEU_HOA", "DIEUHOA"]
+  },
+  "ignore_blocks": ["TITLE", "FRAME", "BORDER", "LOGO", "NORTH", "SCALE", "DIM"]
+}

@@ -1,0 +1,73 @@
+{
+  "_note": "Estimation rules per room type. All values are examples only, not design standards. Adjust per project.",
+  "drawing_unit": "mm",
+  "_note_calc": "estimated = max(ceil(area_m2 / area_per_unit), min) - detected, floored at 0. recommended = extra devices on top of the expected total (fixed count). Each result gets a reason string and a confidence value.",
+  "room_type_keywords": {
+    "living_room": ["LIVING", "SALON", "PHONG KHACH", "PK"],
+    "bedroom": ["BEDROOM", "BED", "PHONG NGU", "PN"],
+    "kitchen": ["KITCHEN", "BEP", "PHONG BEP"],
+    "bathroom": ["BATH", "WC", "TOILET", "VS", "NHA VE SINH"],
+    "corridor": ["CORRIDOR", "HALL", "HALLWAY", "HANH LANG"],
+    "office": ["OFFICE", "WORK", "VAN PHONG"],
+    "meeting_room": ["MEETING", "CONFERENCE", "PHONG HOP"],
+    "other": []
+  },
+  "rules": {
+    "living_room": {
+      "lighting": {"area_per_unit": 4, "min": 2, "recommended": 0},
+      "switches": {"area_per_unit": 12, "min": 1, "recommended": 0},
+      "sockets": {"area_per_unit": 4, "min": 3, "recommended": 0},
+      "sensors": {"area_per_unit": 30, "min": 0, "recommended": 1},
+      "hvac": {"area_per_unit": 30, "min": 1, "recommended": 0}
+    },
+    "bedroom": {
+      "lighting": {"area_per_unit": 5, "min": 1, "recommended": 0},
+      "switches": {"area_per_unit": 10, "min": 1, "recommended": 0},
+      "sockets": {"area_per_unit": 4, "min": 3, "recommended": 0},
+      "sensors": {"area_per_unit": 25, "min": 0, "recommended": 1},
+      "hvac": {"area_per_unit": 25, "min": 1, "recommended": 0}
+    },
+    "kitchen": {
+      "lighting": {"area_per_unit": 4, "min": 2, "recommended": 0},
+      "switches": {"area_per_unit": 10, "min": 1, "recommended": 0},
+      "sockets": {"area_per_unit": 3, "min": 4, "recommended": 0},
+      "sensors": {"area_per_unit": 20, "min": 0, "recommended": 1},
+      "hvac": {"area_per_unit": 25, "min": 0, "recommended": 0}
+    },
+    "bathroom": {
+      "lighting": {"area_per_unit": 3, "min": 1, "recommended": 0},
+      "switches": {"area_per_unit": 8, "min": 1, "recommended": 0},
+      "sockets": {"area_per_unit": 6, "min": 1, "recommended": 0},
+      "sensors": {"area_per_unit": 15, "min": 0, "recommended": 1},
+      "hvac": {"area_per_unit": 20, "min": 0, "recommended": 0}
+    },
+    "corridor": {
+      "lighting": {"area_per_unit": 6, "min": 1, "recommended": 0},
+      "switches": {"area_per_unit": 15, "min": 1, "recommended": 0},
+      "sockets": {"area_per_unit": 15, "min": 0, "recommended": 0},
+      "sensors": {"area_per_unit": 15, "min": 1, "recommended": 0},
+      "hvac": {"area_per_unit": 40, "min": 0, "recommended": 0}
+    },
+    "office": {
+      "lighting": {"area_per_unit": 4, "min": 2, "recommended": 0},
+      "switches": {"area_per_unit": 12, "min": 1, "recommended": 0},
+      "sockets": {"area_per_unit": 3, "min": 4, "recommended": 0},
+      "sensors": {"area_per_unit": 20, "min": 1, "recommended": 0},
+      "hvac": {"area_per_unit": 25, "min": 1, "recommended": 0}
+    },
+    "meeting_room": {
+      "lighting": {"area_per_unit": 4, "min": 2, "recommended": 0},
+      "switches": {"area_per_unit": 12, "min": 1, "recommended": 0},
+      "sockets": {"area_per_unit": 4, "min": 4, "recommended": 0},
+      "sensors": {"area_per_unit": 20, "min": 1, "recommended": 1},
+      "hvac": {"area_per_unit": 20, "min": 1, "recommended": 0}
+    },
+    "other": {
+      "lighting": {"area_per_unit": 6, "min": 1, "recommended": 0},
+      "switches": {"area_per_unit": 15, "min": 1, "recommended": 0},
+      "sockets": {"area_per_unit": 6, "min": 1, "recommended": 0},
+      "sensors": {"area_per_unit": 30, "min": 0, "recommended": 0},
+      "hvac": {"area_per_unit": 40, "min": 0, "recommended": 0}
+    }
+  }
+}

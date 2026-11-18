@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DWG Device Estimator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>DWG Device Estimator</h1>
+    <div class="actions">
+      <span id="status" class="status"></span>
+      <input id="file-input" type="file" accept=".dwg,.dxf" hidden>
+      <button id="upload-btn" class="btn primary">Upload DWG / DXF</button>
+      <button id="export-btn" class="btn" disabled>Export Excel</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="empty" class="card empty">
+      <p>Upload a DWG or DXF file to get a device report per room and zone.</p>
+    </section>
+
+    <div id="content" hidden>
+      <section id="warnings" class="card warnings" hidden></section>
+
+      <section class="card">
+        <h2>Summary</h2>
+        <div id="summary" class="summary"></div>
+      </section>
+
+      <section class="card">
+        <h2>Whole building devices</h2>
+        <p class="hint">Sum of all rooms. Updates automatically when you edit a room.</p>
+        <div id="totals"></div>
+      </section>
+
+      <section class="card">
+        <h2>Drawing preview</h2>
+        <p class="hint">Check that rooms were detected correctly. Click a room to jump to its table.</p>
+        <div id="legend" class="legend"></div>
+        <svg id="preview" class="preview" xmlns="http://www.w3.org/2000/svg"></svg>
+      </section>
+
+      <section>
+        <h2>Rooms by zone</h2>
+        <p class="hint">Change a room type to recalculate its estimates. Edit quantities directly and tick "Verified" when you have checked an item.</p>
+        <div id="rooms"></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
